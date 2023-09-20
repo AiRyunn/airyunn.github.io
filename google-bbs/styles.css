@@ -1,4 +1,45 @@
 #google-logo {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 160px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.container {
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    min-width: 640px;
+}
+
+.search-box {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+
+.gsc-webResult.gsc-result {
+    padding: 16px 0 !important;
+  }
+
+.gsc-control-cse .gs-spelling,
+.gsc-control-cse .gs-result .gs-title,
+.gsc-control-cse .gs-result .gs-title * {
+    font-size: 20px !important;
+}
+
+.gs-bidi-start-align .gs-visibleUrl .gs-visibleUrl-breadcrumb {
+    font-size: 12px !important;
+    color: #4d5156 !important;
+}
+
+.gsc-control-cse .gsc-table-result {
+    font-size: 14px !important;
+}
+
+.gs-webResult div.gs-visibleUrl {
+    font-size: 12px !important;
+    color: #4d5156 !important;
 }

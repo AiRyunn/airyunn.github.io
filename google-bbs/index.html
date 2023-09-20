@@ -5,8 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Google BBS</title>
+  <link rel="shortcut icon" href="./favicon.ico" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <script defer src="./script.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js"></script>
 </head>
 
@@ -15,16 +17,17 @@
   <section class="section">
     <div class="container">
       <div class="has-text-centered">
-        <img id="google-logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
-          alt="Logo" width="272">
-        <gcse:searchbox></gcse:searchbox>
+        <img id="google-logo" class="is-hidden-mobile" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Logo" width="272">
+        <img id="google-logo" class="is-hidden-tablet" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" alt="Logo" width="160">
+        <div class="search-box">
+          <input class="input is-rounded" type="text" id="search-input" style="width: 70%;"></input>
+          <button class="button is-light is-rounded" id="search-button">Search</button>
+        </div>
       </div>
-      <div>
-        <gcse:searchresults></gcse:searchresults>
-      </div>
+      <div class="gcse-searchresults-only"></div>
+
     </div>
   </section>
-  <script defer src="script.js"></script>
 </body>
 
 </html>
