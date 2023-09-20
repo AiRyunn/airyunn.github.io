@@ -1,14 +1,33 @@
+@media (max-width: 640px) {
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+
 #google-logo {
     margin-top: 160px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     position: relative;
 }
 
 .container {
-    flex-direction: column;
     align-items: center;
-    width: 55%;
-    min-width: 640px;
+    width: 50%;
+}
+
+@media (min-width: 641px) {
+    .container {
+        min-width: 640px;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 100%;
+        min-width: 0;
+    }
 }
 
 .search-box {
@@ -16,13 +35,13 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 
 .gsc-webResult.gsc-result {
     padding: 16px 0 !important;
-  }
+}
 
 .gsc-control-cse .gs-spelling,
 .gsc-control-cse .gs-result .gs-title,
