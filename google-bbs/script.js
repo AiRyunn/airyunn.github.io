@@ -1,10 +1,10 @@
 function init_cse() {
-    var cx = 'f2db1948f357f45d9';
-    var gcse = document.createElement('script');
+    const cx = 'f2db1948f357f45d9';
+    const gcse = document.createElement('script');
     gcse.type = 'text/javascript';
     gcse.async = true;
     gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
+    const s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
 };
 
@@ -36,6 +36,9 @@ function init_search_box() {
     searchButton.addEventListener('click', executeSearch);
 
     searchInput.addEventListener('keydown', function(event) {
+        if (event.isComposing) {
+            return;
+        }
         if (event.key === 'Enter') {
             executeSearch();
         }
@@ -51,7 +54,5 @@ function init() {
 if (document.readyState !== 'loading') {
     init();
 } else {
-    document.addEventListener('DOMContentLoaded', function () {
-        init();
-    });
+    document.addEventListener('DOMContentLoaded', init);
 }
