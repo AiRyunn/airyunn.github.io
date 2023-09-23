@@ -8,6 +8,16 @@ function init_cse() {
     s.parentNode.insertBefore(gcse, s);
 };
 
+function init_title() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q');
+    if (query !== null && query !== undefined && query !== '') {
+        document.title = `${query} - Google BBS`;
+      } else {
+        document.title = 'Google BBS';
+      }
+}
+
 function init_search_box() {
     const searchButton = document.getElementById('search-button');
     const searchInput = document.getElementById('search-input');
@@ -32,9 +42,9 @@ function init_search_box() {
     });
 }
 
-
 function init() {
     init_cse();
+    init_title();
     init_search_box();
 }
 
